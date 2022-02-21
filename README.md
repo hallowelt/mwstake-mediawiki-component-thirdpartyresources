@@ -24,18 +24,11 @@ If `npm` is used to pull in actual dependenies, it is recommended to copy the "d
 Example `package.json`
 
 ```json
-{
-	"private": true,
-	"scripts": {
-		...
-		"postinstall": "cp node_modules/some-package/dist/some-package.min.js resources/lib/"
-	},
-	"devDependencies": {
-		...
-	},
-	"dependencies": {
-		"some-package": "^1.0.0"
-	}
+"scripts": {
+	"postinstall": "cp node_modules/some-package/dist/some-package.min.js resources/lib/"
+},
+"dependencies": {
+	"some-package": "^1.0.0"
 }
 ```
 
@@ -46,34 +39,30 @@ MediaWiki ResourceLoader may currupt pre-packaged JS/CSS files, as it applies "m
 To overcome such issues, use the `"class"` property of the `"ResourceModule"` definition like this:
 
 ```json
-	...,
-	"ResourceModules": {
-		"ext.VTreeView": {
-			"class": "MWStake\\MediaWiki\\Component\\3rdPartyResources\\ResourceLoader\\DistFiles",
-			"packageFiles": [
-				"lib/some-package.min.js"
-			]
-		}
-	},
-	"ResourceFileModulePaths": {
-		"localBasePath": "resources",
-		"remoteExtPath": "MyExtension/resources"
-	},
-	...
+"ResourceModules": {
+	"ext.VTreeView": {
+		"class": "MWStake\\MediaWiki\\Component\\3rdPartyResources\\ResourceLoader\\DistFiles",
+		"packageFiles": [
+			"lib/some-package.min.js"
+		]
+	}
+},
+"ResourceFileModulePaths": {
+	"localBasePath": "resources",
+	"remoteExtPath": "MyExtension/resources"
+},
 ```
 
 If a special `module.exports` is required, it can be specified in the `"module.exports"` property.
 
 ```json
-	...,
-	"ResourceModules": {
-		"ext.VTreeView": {
-			"class": "MWStake\\MediaWiki\\Component\\3rdPartyResources\\ResourceLoader\\DistFiles",
-			"module.exports": "SomePackageComponent",
-			"packageFiles": [
-				"lib/some-package.min.js"
-			]
-		}
-	},
-	...
+"ResourceModules": {
+	"ext.VTreeView": {
+		"class": "MWStake\\MediaWiki\\Component\\3rdPartyResources\\ResourceLoader\\DistFiles",
+		"module.exports": "SomePackageComponent",
+		"packageFiles": [
+			"lib/some-package.min.js"
+		]
+	}
+},
 ```
