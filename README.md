@@ -1,5 +1,5 @@
 ## MediaWiki Stakeholders Group - Components
-# 3rdPartyResources for MediaWiki
+# ThirdPartyResources for MediaWiki
 
 Provides ResourceLoader module definitions that allow for inclusion of third-party pre-compiled resources (JS/CSS).
 
@@ -7,7 +7,7 @@ Provides ResourceLoader module definitions that allow for inclusion of third-par
 
 ## Use in a MediaWiki extension
 
-Add `"mwstake/mediawiki-component-3rdpartyresources": "~1.0"` to the `require` section of your `composer.json` file.
+Add `"mwstake/mediawiki-component-thirdpartyresources": "~1.0"` to the `require` section of your `composer.json` file.
 
 Explicit initialization is required. This can be archived by
 - either adding `"callback": "mwsInitComponents"` to your `extension.json`/`skin.json`
@@ -41,7 +41,7 @@ To overcome such issues, use the `"class"` property of the `"ResourceModule"` de
 ```json
 "ResourceModules": {
 	"ext.VTreeView": {
-		"class": "MWStake\\MediaWiki\\Component\\3rdPartyResources\\ResourceLoader\\DistFiles",
+		"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
 		"packageFiles": [
 			"lib/some-package.min.js"
 		]
@@ -58,7 +58,7 @@ If a special `module.exports` is required, it can be specified in the `"module.e
 ```json
 "ResourceModules": {
 	"ext.VTreeView": {
-		"class": "MWStake\\MediaWiki\\Component\\3rdPartyResources\\ResourceLoader\\DistFiles",
+		"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
 		"module.exports": "SomePackageComponent",
 		"packageFiles": [
 			"lib/some-package.min.js"

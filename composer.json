@@ -1,5 +1,5 @@
 {
-	"name": "mwstake/mediawiki-component-3rdpartyresources",
+	"name": "mwstake/mediawiki-component-thirdpartyresources",
 	"description": "Provides background tasks infrastructure based on MediaWikis `maintenance/runJobs.php`",
 	"license": "GPL-3.0-only",
 	"authors": [
@@ -20,8 +20,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"MWStake\\MediaWiki\\Component\\3rdPartyResources\\": "src/",
-			"MWStake\\MediaWiki\\Component\\3rdPartyResources\\Tests\\": "tests/phpunit/"
+			"MWStake\\MediaWiki\\Component\\ThirdPartyResources\\": "src/",
+			"MWStake\\MediaWiki\\Component\\ThirdPartyResources\\Tests\\": "tests/phpunit/"
 		},
 		"files": [
 			"bootstrap.php"
