@@ -1,6 +1,6 @@
 {
 	"name": "mwstake/mediawiki-component-thirdpartyresources",
-	"description": "Provides background tasks infrastructure based on MediaWikis `maintenance/runJobs.php`",
+	"description": "Provides ResourceLoader module definitions that allow for inclusion of third-party pre-compiled resources (JS/CSS)",
 	"license": "GPL-3.0-only",
 	"authors": [
 		{
