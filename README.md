@@ -34,13 +34,13 @@ Example `package.json`
 
 ### Setting up the ResourceLoader module
 
-MediaWiki ResourceLoader may currupt pre-packaged JS/CSS files, as it applies "minification". Also it may lack a proper `module.exports` statement, to make the third party code available to the consuming code.
+MediaWiki ResourceLoader may corrupt pre-packaged JS/CSS files, as it applies "minification". Also it may lack a proper `module.exports` statement, to make the third party code available to the consuming code.
 
 To overcome such issues, use the `"class"` property of the `"ResourceModule"` definition like this:
 
 ```json
 "ResourceModules": {
-	"ext.VTreeView": {
+	"ext.SomePackageComponent": {
 		"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
 		"packageFiles": [
 			"lib/some-package.min.js"
