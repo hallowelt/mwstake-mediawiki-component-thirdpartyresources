@@ -2,6 +2,7 @@
 
 namespace MWStake\MediaWiki\Component\ThirdPartyResources\ResourceLoader;
 
+use ResourceLoader;
 use ResourceLoaderContext;
 use ResourceLoaderFileModule;
 
@@ -46,7 +47,9 @@ class DistFiles extends ResourceLoaderFileModule {
 			$this->maybeAddModuleExports();
 			$this->trimFileContent();
 
-			$modifiedFiles[$filename]['content'] = $this->currentFileContent;
+			$modifiedFiles[$filename]['content'] =
+				ResourceLoader::FILTER_NOMIN
+				. $this->currentFileContent;
 		}
 		$package['files'] = $modifiedFiles;
 
