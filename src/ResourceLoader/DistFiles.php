@@ -2,9 +2,9 @@
 
 namespace MWStake\MediaWiki\Component\ThirdPartyResources\ResourceLoader;
 
-use ResourceLoader;
-use ResourceLoaderContext;
-use ResourceLoaderFileModule;
+use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
+use MediaWiki\ResourceLoader\ResourceLoader;
+use MediaWiki\ResourceLoader\FileModule as ResourceLoaderFileModule;
 
 class DistFiles extends ResourceLoaderFileModule {
 
