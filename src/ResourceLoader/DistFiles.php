@@ -3,8 +3,8 @@
 namespace MWStake\MediaWiki\Component\ThirdPartyResources\ResourceLoader;
 
 use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
-use MediaWiki\ResourceLoader\ResourceLoader;
 use MediaWiki\ResourceLoader\FileModule as ResourceLoaderFileModule;
+use MediaWiki\ResourceLoader\ResourceLoader;
 
 class DistFiles extends ResourceLoaderFileModule {
 
